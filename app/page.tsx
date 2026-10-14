@@ -209,6 +209,17 @@ export default function Home() {
           {he ? "English" : "עברית"}
         </button>
       </header>
+      <div className="demo-banner" role="note">
+        <strong>
+          {t("DEMO — The data is not real", "זהו אתר דמו — המידע אינו אמיתי")}
+        </strong>
+        <span>
+          {t(
+            "All vehicles, locations and discounts are fictional and for illustration only.",
+            "כל הרכבים, המיקומים וההנחות פיקטיביים ומוצגים להמחשה בלבד.",
+          )}
+        </span>
+      </div>
       <main>
         <aside>
           <div className="intro">

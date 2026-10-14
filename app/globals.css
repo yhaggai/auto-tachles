@@ -95,7 +95,7 @@ header {
 }
 main {
   display: flex;
-  height: calc(100dvh - 123px);
+  height: calc(100dvh - 195px);
   min-height: 550px;
 }
 aside {
@@ -668,4 +668,26 @@ footer {
 }
 .github-link:hover {
   text-decoration: underline;
+}
+
+.demo-banner {
+  min-height: 72px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+  background: #fff0c2;
+  color: #573800;
+  border-bottom: 2px solid #dfae36;
+  line-height: 1.5;
+}
+.demo-banner strong {
+  font-size: 16px;
+}
+.demo-banner span {
+  font-size: 12px;
 }
