@@ -657,3 +657,15 @@ footer {
   border-right: 1px solid #d8dfd5;
   letter-spacing: 0;
 }
+
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  font-weight: 600;
+  color: #294333;
+}
+.github-link:hover {
+  text-decoration: underline;
+}

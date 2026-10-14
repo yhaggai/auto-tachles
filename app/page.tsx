@@ -465,6 +465,16 @@ export default function Home() {
             "נתוני ההנחות והזמינות מגיעים מאוטותל. בדקו את ההצעה באפליקציית אוטותל לפני ההזמנה.",
           )}
         </span>
+        <a
+          className="github-link"
+          href="https://github.com/yhaggai/auto-tachles"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={t("View source on GitHub", "צפייה בקוד המקור ב־GitHub")}
+        >
+          <span dir="ltr">GitHub</span>
+          <ArrowUpRight size={14} aria-hidden="true" />
+        </a>
       </footer>
     </div>
   );
