@@ -59,3 +59,9 @@ The Sites edition has passed TypeScript and build checks. The standalone Next.js
 Application code: MIT (see `LICENSE`). Leaflet: BSD-2-Clause (see `public/vendor/LEAFLET-LICENSE`). Other dependencies retain their own licenses. Map data, tiles, and AutoTel data are not covered by this project's MIT license.
 
 This project is independent and is not affiliated with or endorsed by AutoTel. Confirm discounts and availability in the official AutoTel app before booking.
+
+## Vercel Analytics
+
+Vercel Web Analytics tracks page views through the root layout. Enable Web Analytics
+for the auto-tachles project in Vercel and deploy to start collecting data.
+View traffic in the project’s Analytics dashboard. No measurement ID is required.

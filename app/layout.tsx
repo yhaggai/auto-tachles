@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 export const metadata: Metadata = {
   title: "אוטו תכל׳ס | רכבי אוטותל בהנחה",
@@ -15,7 +16,10 @@ export default function RootLayout({
       <head>
         <link rel="stylesheet" href="/vendor/leaflet.css" />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
