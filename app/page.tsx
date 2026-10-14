@@ -83,10 +83,6 @@ export default function Home() {
   }
   useEffect(() => {
     refresh();
-    const id = setInterval(() => {
-      if (!document.hidden) refresh();
-    }, 60000);
-    return () => clearInterval(id);
   }, []);
   useEffect(() => {
     const s = document.createElement("script");
@@ -216,6 +212,12 @@ export default function Home() {
       <main>
         <aside>
           <div className="intro">
+            <div className="notice" role="note">
+              {t(
+                "DEMO — All vehicles, locations, discounts and fuel levels are fictional. Not for booking or navigation.",
+                "אתר הדגמה — כל הרכבים, המיקומים, ההנחות ומפלסי הדלק פיקטיביים. לא להזמנה או לניווט.",
+              )}
+            </div>
             <div className="eyebrow">
               {t("THE CITY. FOR LESS.", "העיר שלכם. בפחות כסף.")}
             </div>
@@ -256,7 +258,7 @@ export default function Home() {
             <h2>
               {busy && !updated
                 ? t("Finding cars…", "מחפשים רכבים…")
-                : filtered.length + t(" cars available", " רכבים זמינים")}
+                : filtered.length + t(" demo cars", " רכבים לדוגמה")}
             </h2>
             <span>
               {filter
@@ -270,8 +272,8 @@ export default function Home() {
                 <AlertCircle size={19} />
                 <div>
                   {t(
-                    "AutoTel is temporarily unavailable. Please try refreshing in a moment.",
-                    "לא ניתן לטעון כרגע נתונים מאוטותל. נסו לרענן בעוד רגע.",
+                    "Demo data could not load. Please try again.",
+                    "לא ניתן לטעון כרגע את נתוני ההדגמה. נסו שוב.",
                   )}
                   {updated && (
                     <p>
@@ -320,7 +322,7 @@ export default function Home() {
                   </span>
                   <span className="car-info">
                     <strong>
-                      {t("AutoTel", "אוטותל")} <bdi>#{c.id}</bdi>
+                      {t("Demo car", "רכב לדוגמה")} <bdi>#{c.id}</bdi>
                     </strong>
                     <span>
                       <MapPin size={12} />{" "}
@@ -355,7 +357,8 @@ export default function Home() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    {t("Directions", "הוראות הגעה")} <ArrowUpRight size={14} />
+                    {t("Demo directions", "הוראות הגעה לדוגמה")}{" "}
+                    <ArrowUpRight size={14} />
                   </a>
                 </div>
               </article>
@@ -363,16 +366,8 @@ export default function Home() {
           </div>
           <div className="aside-footer">
             <span className={"status-dot " + (error ? "warn" : "")} />
-            {updated
-              ? t("Updated ", "עודכן ב־") +
-                new Date(updated).toLocaleTimeString(he ? "he-IL" : "en-GB", {
-                  hour: "2-digit",
-                  minute: "2-digit",
-                  timeZone: "Asia/Jerusalem",
-                }) +
-                t(" · Israel time", " · שעון ישראל")
-              : t("Connecting to AutoTel…", "מתחברים לאוטותל…")}
-            <span>{t("Auto-refresh 60s", "רענון אוטומטי בכל דקה")}</span>
+            {t("Demo · fictional vehicles", "דמו · רכבים פיקטיביים")}
+            <span>{t("No live data", "ללא נתונים חיים")}</span>
           </div>
         </aside>
         <section
@@ -386,8 +381,7 @@ export default function Home() {
               {filter
                 ? filter + t("% off cars", "% הנחה על רכבים")
                 : t("All discounted cars", "כל הרכבים בהנחה")}
-              <span className="divider" />{" "}
-              {t("Live availability", "זמינות בזמן אמת")}
+              <span className="divider" /> {t("Mock data", "נתונים פיקטיביים")}
             </div>
             <button
               className="refresh"
@@ -461,8 +455,8 @@ export default function Home() {
         </span>
         <span>
           {t(
-            "Discounts and availability come from AutoTel. Confirm the offer in the AutoTel app before booking.",
-            "נתוני ההנחות והזמינות מגיעים מאוטותל. בדקו את ההצעה באפליקציית אוטותל לפני ההזמנה.",
+            "Demonstration only. All vehicle data is fictional; no connection to the AutoTel API.",
+            "להמחשה בלבד. כל נתוני הרכבים פיקטיביים; אין חיבור לממשק הנתונים של אוטותל.",
           )}
         </span>
         <a

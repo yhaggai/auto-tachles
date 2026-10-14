@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 export const metadata: Metadata = {
-  title: "אוטו תכל׳ס | רכבי אוטותל בהנחה",
+  title: "אוטו תכל׳ס | דמו עם נתונים פיקטיביים",
   description:
-    "Find discounted AutoTel cars around Tel Aviv. Live availability, clear discounts, and directions.",
+    "Auto Tachles concept demo. All vehicle locations, discounts and fuel levels are fictional. No live AutoTel data.",
 };
 export default function RootLayout({
   children,
